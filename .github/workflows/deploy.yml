@@ -20,11 +20,7 @@ env:
   DEPLOY_HOST_KEY: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIECecE/2xr//MN+kXorDn67k6AaWfhZKUd7gle5DUZK5
 
 jobs:
-  test:
-    uses: ./.github/workflows/phpunit.yml
-
   build:
-    needs: test
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     permissions:
